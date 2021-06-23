@@ -16,3 +16,50 @@
 //     "jquery",
 //     "node.js"
 // ]
+
+function tabs(data) {
+    
+    // GREATE ELEMENT 
+    const tab =document.createElement("div")
+
+    //ADD CSS
+    tab.classList.add('tab')
+
+    //ADD CONNECT 
+    tab.textContent = data
+
+    //RETURN
+    return tab
+}
+
+//ADD DOM
+const topics=document.querySelector('.topics')
+
+//HTTP/API REQUEST 
+axios.get("https://gabitimes.herokuapp.com/topics")
+
+//PROMISES
+.then(res => {
+   const data =res.data.topics
+   data.forEach(item => {
+        topics.appendChild(tabs(item))
+   });
+  
+})
+.catch(err => {
+  console.log(err.message)
+})
+
+const all =document.createElement("div")
+all.textContent = "All"
+all.classList.add('tab')
+topics.appendChild(all)
+
+
+// console.log(topics)
+
+
+
+// topics.addEventListener("click",function(even){
+//  even.target.style.background ="black"
+// })
