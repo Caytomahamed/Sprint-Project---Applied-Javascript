@@ -18,7 +18,11 @@
 //
 // Create a card for each of the articles and add the card to the DOM.
 
+
+
+//COMPONENT FUCTION ARTICLES
 function cardMaker(head,img,spanAthname){
+
 
     //CREAT ELEMENT 
     const card = document.createElement("div")
@@ -28,6 +32,7 @@ function cardMaker(head,img,spanAthname){
     const image = document.createElement("img")
     const spanName = document.createElement("span")
 
+
     //CONNECT 
     card.appendChild(headline)
     card.appendChild(author)
@@ -35,45 +40,42 @@ function cardMaker(head,img,spanAthname){
     author.appendChild(imgContianer)
     imgContianer.appendChild(image)
 
+
     //ADD CSS
      card.classList.add("card")
      headline.classList.add("headline")
      author.classList.add("author")
      imgContianer.classList.add("img-container")
 
+
     // ADD CONTENT
     headline.textContent= head
     image.src =img
     spanName.textContent= spanAthname
 
+
      //RETURN PARANET 
      return card
 }
 
+
+
+//PARANET SELECTOR 
 const cardsContainer =document.querySelector('.cards-container')
 
+//HTTP/API REQUISE 
 axios.get("https://gabitimes.herokuapp.com/articles")
 
 .then(res => {
-    // console.log(res.data.articles);#
+    // console.log(res.data.articles);
 
-   
 
-//    topics.addEventListener("click", function(e){
-//   console.log()
-//   });
 
+    //LOOPING ALL OBJECT 
     object =res.data.articles
     for (const property in object) {
         // console.log(`${property}: ${object[property]}`);
       }
-      
-    //   console.log(object.javascript)
-
-  
-//    console.log(tab)
-
-   const tab = document.querySelector(".tab")
 
 
     //JAVASCRIPT 
@@ -86,13 +88,9 @@ axios.get("https://gabitimes.herokuapp.com/articles")
         const spanAthname = item.authorName
 
         cardsContainer.appendChild(cardMaker(head,img,spanAthname))
-
-       
     });
   
    
-
-
 
     //BOOTSRAP
 
@@ -106,7 +104,6 @@ axios.get("https://gabitimes.herokuapp.com/articles")
         cardsContainer.appendChild(cardMaker(head,img,spanAthname))
     });
 
-    // tab[1].appendChild(bootstrap)
 
 
     //TECHNOLOGY
@@ -120,8 +117,6 @@ axios.get("https://gabitimes.herokuapp.com/articles")
 
         cardsContainer.appendChild(cardMaker(head,img,spanAthname))
     });
-  
-    // tab[2].appendChild(technology)
 
 
     //JQUERY
@@ -136,8 +131,7 @@ axios.get("https://gabitimes.herokuapp.com/articles")
         cardsContainer.appendChild(cardMaker(head,img,spanAthname))
     });
 
-    
-    // tab[3].appendChild(jquery)
+
 
     //NODE.JS
     
@@ -150,14 +144,68 @@ axios.get("https://gabitimes.herokuapp.com/articles")
 
         cardsContainer.appendChild(cardMaker(head,img,spanAthname))
 
-        const tab = document.querySelectorAll(".tab")
 
-topics.addEventListener("click",function(even){
-  tab[0].appendChild(javascript)
+ 
+
 })
     });
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       
     // tab[4].appendChild(object)
-})
-// console.log(cardMaker());
+// ole.log(cardMaker());
+// const tab =document.createElement("div") 
+// const tab = document.querySelectorAll(".tab")
+// console.log(tab);
+// console.log(topics)
+// topics.map(function(i){
+//     console.log(i);
+// })
+// const tab = document.querySelectorAll(".tab")
+
+// tab[1].addEventListener("click",function(even){
+//     //  tab[1].appendChild(cardsContainer.appendChild(cardMaker(head,img,spanAthname)))
+//           console.log(even);
+//      })
+    
+    // })
+
+    //    console.log(tab)
+
+//    const tab = document.querySelector(".tab")
+    
+    // tab[3].appendChild(jquery)
+
+        // tab[1].appendChild(bootstrap)
+
+        // topics.addEventListener("click", function(e){
+        //     //   console.log(e)
+        //     //   });
+            // tab[2].appendChild(technology)

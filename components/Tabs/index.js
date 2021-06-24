@@ -17,6 +17,9 @@
 //     "node.js"
 // ]
 
+
+//COMPONENT FUNTION TABS
+
 function tabs(data) {
     
     // GREATE ELEMENT 
@@ -24,19 +27,24 @@ function tabs(data) {
 
     //ADD CSS
     tab.classList.add('tab')
+  
 
     //ADD CONNECT 
     tab.textContent = data
+    
 
     //RETURN
     return tab
 }
 
+
 //ADD DOM
 const topics=document.querySelector('.topics')
 
+
 //HTTP/API REQUEST 
 axios.get("https://gabitimes.herokuapp.com/topics")
+
 
 //PROMISES
 .then(res => {
@@ -53,13 +61,30 @@ axios.get("https://gabitimes.herokuapp.com/topics")
 const all =document.createElement("div")
 all.textContent = "All"
 all.classList.add('tab')
+// all.classList.add('active-tab')
 topics.appendChild(all)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// tab.forEach(function(item){
+//   console.log(item);
+// })
 
 // console.log(topics)
 
 
-
-// topics.addEventListener("click",function(even){
-//  even.target.style.background ="black"
-// })
