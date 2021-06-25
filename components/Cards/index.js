@@ -199,37 +199,3 @@ axios.get("https://gabitimes.herokuapp.com/articles")
 
 
 
-
-
-
-      
-    // tab[4].appendChild(object)
-// ole.log(cardMaker());
-// const tab =document.createElement("div") 
-// const tab = document.querySelectorAll(".tab")
-// console.log(tab);
-// console.log(topics)
-// topics.map(function(i){
-//     console.log(i);
-// })
-// const tab = document.querySelectorAll(".tab")
-
-// tab[1].addEventListener("click",function(even){
-//     //  tab[1].appendChild(cardsContainer.appendChild(cardMaker(head,img,spanAthname)))
-//           console.log(even);
-//      })
-    
-    // })
-
-    //    console.log(tab)
-
-//    const tab = document.querySelector(".tab")
-    
-    // tab[3].appendChild(jquery)
-
-        // tab[1].appendChild(bootstrap)
-
-        // topics.addEventListener("click", function(e){
-        //     //   console.log(e)
-        //     //   });
-            // tab[2].appendChild(technology)

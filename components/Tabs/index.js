@@ -18,25 +18,7 @@
 // ]
 
 
-//HTTP/API REQUEST 
-axios.get("https://gabitimes.herokuapp.com/topics")
-//PROMISES
-.then(res => {
-  // console.log(res.data.topics)
-//data oo dhanbay inoo hanysaa//tab ay data oodhami hoose imanyso 
-  tabMaker("ALL")
-  
-  //LOOPING DATA TAB OO DHAN 
 
-   const newTab =res.data.topics
-   newTab.forEach(topic => {
-    tabMaker(topic)
-   });
-  
-})
-.catch(err => {
-  console.log(err.message)
-})
 
 //SELECTOR PARANET 
 const topics=document.querySelector('.topics')
@@ -63,6 +45,28 @@ function tabMaker(data) {
     return tab
 }
 
+//HTTP/API REQUEST 
+axios.get("https://gabitimes.herokuapp.com/topics")
+//PROMISES
+.then(res => {
+  // console.log(res.data.topics)
+//data oo dhanbay inoo hanysaa//tab ay data oodhami hoose imanyso 
+  tabMaker("ALL")
+  
+  //LOOPING DATA TAB OO DHAN 
+
+   const newTab =res.data.topics
+   newTab.forEach(topic => {
+    tabMaker(topic)
+   });
+  
+})
+.catch(err => {
+  console.log(err.message)
+})
+
+
+//ADD ENE
 
 topics.addEventListener("click" , function (even) {
   const targatedTopic =even.target.dataset.subject
@@ -96,11 +100,6 @@ topics.addEventListener("click" , function (even) {
 
 
 
-// const all =document.createElement("div")
-// all.textContent = "All"
-// all.classList.add('tab')
-// // all.classList.add('active-tab')
-// topics.appendChild(all)
 
 
 
@@ -113,15 +112,4 @@ topics.addEventListener("click" , function (even) {
 
 
 
-
-
-
-
-
-
-// tab.forEach(function(item){
-//   console.log(item);
-// })
-
-// console.log(topics)
 
