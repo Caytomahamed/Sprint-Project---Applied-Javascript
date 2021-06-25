@@ -24,8 +24,8 @@ axios.get("https://gabitimes.herokuapp.com/topics")
 .then(res => {
   // console.log(res.data.topics)
 //data oo dhanbay inoo hanysaa//tab ay data oodhami hoose imanyso 
-  tabMaker("ALL") 
-
+  tabMaker("ALL")
+  
   //LOOPING DATA TAB OO DHAN 
 
    const newTab =res.data.topics
@@ -66,15 +66,13 @@ function tabMaker(data) {
 
 topics.addEventListener("click" , function (even) {
   const targatedTopic =even.target.dataset.subject
-  console.log(targatedTopic);
+
+  // console.log(targatedTopic);
+
   const cards =document.querySelectorAll(".card")
   cards.forEach(card => {
     card.style.display ="flex"
   
-    if(targatedTopic ==even.target){
-     tragat
-    }
-
     if (card.dataset.subject !== targatedTopic) {
       card.style.display ="none"
     }
@@ -82,7 +80,19 @@ topics.addEventListener("click" , function (even) {
       card.style.display ="flex"
     }
   })
+
+  const tab =document.querySelectorAll(".tab")
+  tab.forEach(function (top) {
+    const targatedTopic =even.target.dataset.subject
+    if(targatedTopic){
+      even.target.classList.add("active-tab")
+      top.classList.remove("active-tab")
+    }
+
+      
 })
+
+})  
 
 
 
@@ -114,5 +124,4 @@ topics.addEventListener("click" , function (even) {
 // })
 
 // console.log(topics)
-
 
