@@ -29,14 +29,16 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your instructor/GL.
 
 1. What is the DOM?
-
+DOM waxa waxa weeye maka pageka la #RUN gareeyo ayuu #browserku sameeyaa,si kalan waxa weeeye halka lagahelo #page #contentgiisa #stylin kiisa iyo #function kiisaba 
+#Document Object Model 
 2. What is an event?
-
+event tigu waxa weeye inaa waxka badali karno page inagoo isticmaalayna #mouse #keyboard
 3. What is an event listener?
-
+waxa weeye #funtion kaa soo dhagaysanaya #eventiga  iyo shaqadaan udirayna si #callback function
 4. Why would we convert a NodeList into an Array?
-
+waxaan rabnaa in ay ushaqayso sidii array oo kale  ayna qaadato #propreties  #method
 5. What is a component?
+#funtion inoo samynay html content inagoo isticmaalayna javascript #
 
 ### Git Set up
 
